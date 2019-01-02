@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "gsap": "^2.0.2",
     "scrollmagic": "^2.0.6"
   }
 }

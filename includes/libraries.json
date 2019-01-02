@@ -1,45 +1,152 @@
 [{
-    "title": "ScrollMagic",
-    "slug": "vfx-sm",
-    "basepath": "/node_modules/scrollmagic/scrollmagic/minified",
-    "members": [{
-            "path": "ScrollMagic.min.js",
-            "title": "ScrollMagic Core",
-            "description": "The ScrollMagic core, required for any ScrollMagic functionality. Note that you may need to disable other scroll handlers to avoid conflicts.'",
-            "slug": "vfx-sm-core",
-            "isRequired": true
-        },
-        {
-            "path": "plugins/jquery.ScrollMagic.min.js",
-            "title": "jQuery Plugin",
-            "description": "foo",
-            "slug": "vfx-sm-jquery",
-            "isRequired": false,
-            "dependencies": "vfx-sm-core"
-        },
-        {
-            "path": "plugins/animation.gsap.min.js",
-            "title": "GSAP Plugin",
-            "description": "foo",
-            "slug": "vfx-sm-gsap",
-            "isRequired": false,
-            "dependencies": "vfx-sm-core"
-        },
-        {
-            "path": "plugins/animation.velocity.min.js",
-            "title": "Velocity Plugin",
-            "description": "foo",
-            "slug": "vfx-sm-velocity",
-            "isRequired": false,
-            "dependencies": "vfx-sm-core"
-        },
-        {
-            "path": "plugins/debug.addIndicators.min.js",
-            "title": "Debug Add Indicators",
-            "description": "foo",
-            "slug": "vfx-sm-debug-add-indicators",
-            "isRequired": false,
-            "dependencies": "vfx-sm-core"
-        }
-    ]
-}]
+        "title": "ScrollMagic",
+        "slug": "vfx-sm",
+        "basepath": "/node_modules/scrollmagic/scrollmagic/minified",
+        "members": [{
+                "path": "ScrollMagic.min.js",
+                "title": "ScrollMagic Core",
+                "description": "The ScrollMagic core, required for any ScrollMagic functionality. Note that you may need to disable other scroll handlers to avoid conflicts.'",
+                "slug": "vfx-sm-core",
+                "isRequired": true
+            },
+            {
+                "path": "plugins/jquery.ScrollMagic.min.js",
+                "title": "jQuery Plugin",
+                "description": "foo",
+                "slug": "vfx-sm-jquery",
+                "isRequired": false,
+                "dependencies": "vfx-sm-core"
+            },
+            {
+                "path": "plugins/animation.gsap.min.js",
+                "title": "GSAP Plugin",
+                "description": "foo",
+                "slug": "vfx-sm-gsap",
+                "isRequired": false,
+                "dependencies": "vfx-sm-core"
+            },
+            {
+                "path": "plugins/animation.velocity.min.js",
+                "title": "Velocity Plugin",
+                "description": "foo",
+                "slug": "vfx-sm-velocity",
+                "isRequired": false,
+                "dependencies": "vfx-sm-core"
+            },
+            {
+                "path": "plugins/debug.addIndicators.min.js",
+                "title": "Debug Add Indicators",
+                "description": "foo",
+                "slug": "vfx-sm-debug-add-indicators",
+                "isRequired": false,
+                "dependencies": "vfx-sm-core"
+            }
+        ]
+    },
+    {
+        "title": "Greensock Animation Platform (GSAP)",
+        "slug": "vfx-gsap",
+        "basepath": "/node_modules/gsap/src/minified",
+        "members": [{
+                "path": "TweenLite.min.js",
+                "title": "TweenLite",
+                "slug": "vfx-gsap-tweenlite"
+            },
+            {
+                "path": "TweenMax.min.js",
+                "title": "TweenMax",
+                "slug": "vfx-gsap-tweenmax"
+            },
+            {
+                "path": "TimelineLite.min.js",
+                "title": "TimelineLite",
+                "slug": "vfx-gsap-timelinelite"
+            },
+            {
+                "path": "TimelineMax.min.js",
+                "title": "TimelineMax",
+                "slug": "vfx-gsap-timelinemax"
+            },
+            {
+                "path": "easing/EasePack.min.js",
+                "title": "EasePack",
+                "slug": "vfx-gsap-easepack"
+            },
+            {
+                "path": "plugins/AttrPlugin.min.js",
+                "title": "AttrPlugin",
+                "slug": "vfx-gsap-attrplugin"
+            },
+            {
+                "path": "plugins/BezierPlugin.min.js",
+                "title": "BezierPlugin",
+                "slug": "vfx-gsap-bezierplugin"
+            },
+            {
+                "path": "plugins/ColorPropsPlugin.min.js",
+                "title": "ColorPropsPlugin",
+                "slug": "vfx-gsap-colorpropsplugin"
+            },
+            {
+                "path": "plugins/CSSPlugin.min.js",
+                "title": "CSSPlugin",
+                "slug": "vfx-gsap-cssplugin"
+            },
+            {
+                "path": "plugins/CSSRulePlugin.min.js",
+                "title": "CSSRulePlugin",
+                "slug": "vfx-gsap-cssruleplugin"
+            },
+            {
+                "path": "plugins/DirectionalRotationPlugin.min.js",
+                "title": "DirectionalRotationPlugin",
+                "slug": "vfx-gsap-DirectionalRotationPlugin"
+            },
+            {
+                "path": "plugins/EaselPlugin.min.js",
+                "title": "EaselPlugin",
+                "slug": "vfx-gsap-easelplugin"
+            },
+            {
+                "path": "plugins/EndArrayPlugin.min.js",
+                "title": "EndArrayPlugin",
+                "slug": "vfx-gsap-endarrayplugin"
+            },
+            {
+                "path": "plugins/ModifiersPlugin.min.js",
+                "title": "ModifiersPlugin",
+                "slug": "vfx-gsap-modifiersplugin"
+            },
+            {
+                "path": "plugins/PixiPlugin.min.js",
+                "title": "PixiPlugin",
+                "slug": "vfx-gsap-pixiplugin"
+            },
+            {
+                "path": "plugins/RaphaelPlugin.min.js",
+                "title": "RaphaelPlugin",
+                "slug": "vfx-gsap-raphaelplugin"
+            },
+            {
+                "path": "plugins/RoundPropsPlugin.min.js",
+                "title": "RoundPropsPlugin",
+                "slug": "vfx-gsap-roundpropsplugin"
+            },
+            {
+                "path": "plugins/ScrollToPlugin.min.js",
+                "title": "ScrollToPlugin",
+                "slug": "vfx-gsap-scrolltoplugin"
+            },
+            {
+                "path": "plugins/TextPlugin.min.js",
+                "title": "TextPlugin",
+                "slug": "vfx-gsap-textplugin"
+            },
+            {
+                "path": "utils/Draggable.min.js",
+                "title": "Draggable Util",
+                "slug": "vfx-gsap-draggableutil"
+            }
+        ]
+    }
+]

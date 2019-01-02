@@ -125,15 +125,11 @@ class Vfx_Lib_Admin {
 
 		// load libraries
 		$this->libraries = json_decode( file_get_contents( plugin_dir_path( dirname( __FILE__ )  ) . 'includes/libraries.json' ), true );
-
-		 $option_group = 'vfx-libraries';
-
-
+		$option_group = 'vfx-libraries' ;
 		// configure settings form fields
 		foreach($this->libraries as $library) {
-
 		// add each library
-			add_settings_section( $library->slug, __( $library['title'], 'textdomain' ), null, $this->plugin_name);
+			add_settings_section( $library['slug'], __( $library['title'], 'textdomain' ), null, $this->plugin_name);
 
 			// add each library member
 			foreach($library["members"]as $member) {
@@ -142,9 +138,9 @@ class Vfx_Lib_Admin {
 				register_setting( $option_group, $member['slug']);
 				// var_dump($option_group . " " . $member['slug']);
 
-				add_settings_field( $member['slug'], __( $member['title'], 'textdomain' ), array('Vfx_Lib_Admin', 'lib_checkbox_display'), $this->plugin_name, $library->slug, array($member['slug'], $member['title']) );
+				add_settings_field( $member['slug'], __( $member['title'], 'textdomain' ), array('Vfx_Lib_Admin', 'lib_checkbox_display'), $this->plugin_name, $library['slug'], array($member['slug'], $member['title']) );
 
-				// add_settings_field( $member->slug, __( $member['title'], 'textdomain' ), array('Vfx_Lib_Admin', 'lib_checkbox_display'), $this->plugin_name, $library->slug );
+				// add_settings_field( $member->slug, __( $member['title'], 'textdomain' ), array('Vfx_Lib_Admin', 'lib_checkbox_display'), $this->plugin_name, $library['slug'] );
 			}
 		}
 
@@ -154,7 +150,7 @@ class Vfx_Lib_Admin {
 	 * add_settings_field( $id, $title, $callback, $page, $section, $args );
 	 * */
   	// add_settings_field( 'vfx-sm-core', __( 'ScrollMagic Core', 'textdomain' ), array('Vfx_Lib_Admin', 'lib_checkbox_display'), $this->plugin_name, 'section-1' );
-  	// add_settings_field( 'vfx-sm-core', __( 'ScrollMagic Core', 'textdomain' ), array('Vfx_Lib_Admin', 'lib_checkbox_display'), $this->plugin_name, $library->slug );
+  	// add_settings_field( 'vfx-sm-core', __( 'ScrollMagic Core', 'textdomain' ), array('Vfx_Lib_Admin', 'lib_checkbox_display'), $this->plugin_name, $library['slug'] );
 
 	}
 
