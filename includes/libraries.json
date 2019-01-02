@@ -1,40 +1,45 @@
 [{
     "title": "ScrollMagic",
     "slug": "vfx-sm",
+    "basepath": "/node_modules/scrollmagic/scrollmagic/minified",
     "members": [{
-            "path": " ScrollMagic.min.js",
+            "path": "ScrollMagic.min.js",
             "title": "ScrollMagic Core",
-            "description": " The ScrollMagic core, required for any ScrollMagic functionality. Note that you may need to disable other scroll handlers to avoid conflicts.'",
+            "description": "The ScrollMagic core, required for any ScrollMagic functionality. Note that you may need to disable other scroll handlers to avoid conflicts.'",
             "slug": "vfx-sm-core",
             "isRequired": true
         },
         {
-            "path": " plugins/jquery.ScrollMagic.min.js",
+            "path": "plugins/jquery.ScrollMagic.min.js",
             "title": "jQuery Plugin",
-            "description": " foo",
+            "description": "foo",
             "slug": "vfx-sm-jquery",
-            "isRequired": false
+            "isRequired": false,
+            "dependencies": "vfx-sm-core"
         },
         {
-            "path": " plugins/animation.gsap.min.js",
+            "path": "plugins/animation.gsap.min.js",
             "title": "GSAP Plugin",
-            "description": " foo",
+            "description": "foo",
             "slug": "vfx-sm-gsap",
-            "isRequired": false
+            "isRequired": false,
+            "dependencies": "vfx-sm-core"
         },
         {
-            "path": " plugins/animation.velocity.min.js",
+            "path": "plugins/animation.velocity.min.js",
             "title": "Velocity Plugin",
-            "description": " foo",
+            "description": "foo",
             "slug": "vfx-sm-velocity",
-            "isRequired": false
+            "isRequired": false,
+            "dependencies": "vfx-sm-core"
         },
         {
-            "path": " plugins/debug.addIndicators.min.js",
+            "path": "plugins/debug.addIndicators.min.js",
             "title": "Debug Add Indicators",
-            "description": " foo",
+            "description": "foo",
             "slug": "vfx-sm-debug-add-indicators",
-            "isRequired": false
+            "isRequired": false,
+            "dependencies": "vfx-sm-core"
         }
     ]
 }]

@@ -40,6 +40,8 @@ class Vfx_Lib_Public {
 	 */
 	private $version;
 
+	private $libraries;
+
 	/**
 	 * Initialize the class and set its properties.
 	 *
@@ -51,6 +53,7 @@ class Vfx_Lib_Public {
 
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
+		$this->libraries = json_decode( file_get_contents( plugin_dir_path( dirname( __FILE__ )  ) . 'includes/libraries.json' ), true );
 
 	}
 
@@ -96,6 +99,22 @@ class Vfx_Lib_Public {
 		 * class.
 		 */
 
+		// wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/vfx-lib-public.js', array( 'jquery' ), $this->version, false );
+
+			foreach($this->libraries as $library) {
+				foreach($library["members"]as $member) {
+
+					if(get_option($member['slug'])){
+						$dependencies = [];
+						if($member['dependencies']) {
+							// TODO: improve dependency handling
+							$dependencies = [$member['dependencies']];
+						}
+						wp_enqueue_script( $member['slug'], plugin_dir_url( __FILE__ ) . '..' . $library['basepath'] . '/' . $member['path'], $dependencies, $this->version, true );
+
+					}
+				}
+			}
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/vfx-lib-public.js', array( 'jquery' ), $this->version, false );
 
 	}
