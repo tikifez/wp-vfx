@@ -1,6 +1,17 @@
 [{
-        "title": "ScrollMagic",
-        "slug": "vfx-sm",
+  "title": "jQuery Third Party Libraries",
+  "slug": "jquery-3p",
+  "basepath": "/public/js/lib",
+  "members": [{
+    "path": "jQuery throttle / debounce",
+    "title": "jQuery throttle / debounce",
+    "slug": "jquery-debounce",
+    "dependencies": "jquery"
+  }]
+},
+  {
+        "title": "ScrollMagic Libraries",
+        "slug": "scrollmagic",
         "basepath": "/node_modules/scrollmagic/scrollmagic/minified",
         "members": [{
                 "path": "ScrollMagic.min.js",
@@ -44,8 +55,8 @@
         ]
     },
     {
-        "title": "Greensock Animation Platform (GSAP)",
-        "slug": "vfx-gsap",
+        "title": "Greensock Animation Platform (GSAP) Libraries",
+        "slug": "gsap",
         "basepath": "/node_modules/gsap/src/minified",
         "members": [{
                 "path": "TweenLite.min.js",

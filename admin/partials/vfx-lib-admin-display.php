@@ -22,13 +22,9 @@
 <form method="post" action="options.php">
 <?php
 
-  // settings_fields('my-settings-group');
   do_settings_sections('vfx-lib');
-
-               settings_fields("vfx-libraries");
-              //  settings_fields("vfx-sm");
-              //  do_settings_sections("vfx-lib");
-    submit_button();
+  settings_fields("vfx-libraries");
+  submit_button();
 ?>
 
 </form>
